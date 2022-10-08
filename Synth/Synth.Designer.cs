@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.oscillator1 = new Synth.Oscillator();
             this.SuspendLayout();
+            // 
+            // oscillator1
+            // 
+            this.oscillator1.Location = new System.Drawing.Point(50, 45);
+            this.oscillator1.Name = "oscillator1";
+            this.oscillator1.Size = new System.Drawing.Size(200, 100);
+            this.oscillator1.TabIndex = 0;
+            this.oscillator1.TabStop = false;
+            this.oscillator1.Text = "oscillator1";
             // 
             // Synth
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.oscillator1);
             this.Name = "Synth";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Synth_KeyDown);
@@ -43,5 +54,7 @@
         }
 
         #endregion
+
+        private Synth.Oscillator oscillator1;
     }
 }
